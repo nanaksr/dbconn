@@ -11,18 +11,18 @@ Create an array of session settings in you application settings.
 ```
 $settings = [
     'settings' => [
-      'listdb' => [
-          'db1' => [
-              'dsn'  => 'mysql:host=localhost;dbname=nama_name;charset=utf8',
-               'user' => 'root',
-               'pass' => 'yourpassword'
-           ],
-           'db2' => [
-              'dsn'  => 'mysql:host=localhost;dbname=nama_name;charset=utf8',
-               'user' => 'root',
-               'pass' => 'yourpassword'
-           ]
-      ]
+        'listdb' => [
+            'db1' => [
+                'dsn'  => 'mysql:host=localhost;dbname=nama_name;charset=utf8',
+                'user' => 'root',
+                'pass' => 'yourpassword'
+            ],
+            'db2' => [
+                'dsn'  => 'mysql:host=localhost;dbname=nama_name;charset=utf8',
+                'user' => 'root',
+                'pass' => 'yourpassword'
+            ]
+        ]
     ]
 ];
 ```
@@ -51,13 +51,13 @@ class Home
     protected $ci;
     public function __construct($ci)
     { 
-        $dbConn         = $ci->get('dbConn');
-        $this->dbMain   = $dbConn->pdo('main');
+        $dbConn      = $ci->get('dbConn');
+        $this->db1   = $dbConn->pdo('db1');
     }
     
     public function __invoke(Request $request, Response $response, $args)
     {
-        $data = $this->dbMain->prepare("SELECT * FROM `mytable`");
+        $data = $this->db1->prepare("SELECT * FROM `mytable`");
         $data->execute();
         return print_r($data->fetchAll());
     }
