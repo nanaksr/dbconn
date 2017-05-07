@@ -6,10 +6,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "nanaksr\\": "dbconn",
+            "nanaksr\\": "dbconn"
         }
     },
     "require": {
-        "php": "^5.3.3 || ^7.0",
+        "php": "^5.3.3 || ^7.0"
     }
 }
