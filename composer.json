@@ -1,0 +1,12 @@
+{
+    "name": "nanaksr/dbconn",
+    "description": "A simple pdo mysql config for multiple database",
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "nanaksr\\": "dbconn"
+        }
+    },
+}
