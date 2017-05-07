@@ -1,12 +1,15 @@
 {
     "name": "nanaksr/dbconn",
     "description": "A simple pdo mysql config for multiple database",
-    "require": {
-        "php": "^5.3.3 || ^7.0"
-    },
+    "keywords": ["slim", "pdo", "database"],
+    "homepage": "https://github.com/nanaksr/dbconn",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "nanaksr\\": "dbconn"
+            "nanaksr\\": "dbconn",
         }
     },
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+    }
 }
